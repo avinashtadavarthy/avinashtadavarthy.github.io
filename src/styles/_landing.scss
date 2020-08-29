@@ -1,0 +1,60 @@
+// variables
+@import "./helpers/config";
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+
+  img {
+    margin: 0 10vw;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+    a {
+      @include transition-ease;
+      margin: 16px;
+      padding: 4px;
+      color: $text-secondary;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $subtitle-font;
+      font-weight: 400;
+      font-size: 1.5rem;
+      background-size: 100% 200%;
+      background-image: linear-gradient(to bottom, transparent 50%, black 50%);
+      transition: background-position 0.5s;
+
+      &:hover {
+        @include transition-ease;
+        color: $text-primary;
+        text-decoration: none;
+        color: white;
+        background-position: 0 -100%;
+      }
+    }
+  }
+}
+
+.arrow-down {
+  align-self: center;
+  position: absolute;
+  bottom: 20px;
+
+  img {
+    height: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

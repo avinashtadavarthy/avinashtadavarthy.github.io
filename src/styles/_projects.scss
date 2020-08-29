@@ -1,0 +1,200 @@
+@import "./helpers/config";
+
+.projects {
+  min-height: 100vh;
+
+  &-text {
+    margin-bottom: 2rem;
+  }
+
+  .subtopic {
+    font-family: $title-font;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: normal;
+    text-align: center;
+    margin: 4rem 0;
+  }
+
+  .other-projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+// featured projects
+.pic-left {
+  .f-project {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem 0;
+
+    &-poster {
+      background: #c4c4c4;
+      border-radius: 5px;
+      transform: translateX(25px);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      transform: translateX(-25px);
+
+      &-subtitle {
+        font-size: 0.8rem;
+        font-family: $title-font;
+        text-align: right;
+      }
+
+      &-title {
+        font-size: 1.5rem;
+        font-family: $title-font;
+        color: $text-highlight;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      &-description {
+        @include transition-ease;
+        background: black;
+        border-radius: 5px;
+        color: white;
+        padding: 15px;
+        text-align: right;
+        filter: drop-shadow(3px 6px 0px rgba(0, 0, 0, 0.5));
+
+        &:hover {
+          @include transition-ease;
+          filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
+        }
+      }
+
+      &-tech {
+        font-size: 1rem;
+        font-family: $title-font;
+        color: $text-secondary;
+        text-align: right;
+      }
+
+      &-git {
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+.pic-right {
+  .f-project {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem 0;
+
+    &-poster {
+      background: #c4c4c4;
+      border-radius: 5px;
+      transform: translateX(-25px);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      transform: translateX(25px);
+
+      &-subtitle {
+        font-size: 0.8rem;
+        font-family: $title-font;
+        text-align: left;
+      }
+
+      &-title {
+        font-size: 1.5rem;
+        font-family: $title-font;
+        color: $text-highlight;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      &-description {
+        @include transition-ease;
+        background: black;
+        border-radius: 5px;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        filter: drop-shadow(-3px 6px 0px rgba(0, 0, 0, 0.5));
+
+        &:hover {
+          @include transition-ease;
+          filter: drop-shadow(-3px 6px 10px rgba(0, 0, 0, 0.5));
+        }
+      }
+
+      &-tech {
+        font-size: 1rem;
+        font-family: $title-font;
+        color: $text-secondary;
+        text-align: left;
+      }
+
+      &-git {
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+// other projects
+.o-project {
+  @include transition-ease;
+  background: #252525;
+  width: 275px;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  margin: 2rem;
+  border-radius: 5px;
+  filter: drop-shadow(3px 6px 0px rgba(0, 0, 0, 0.5));
+
+  &:hover {
+    @include transition-ease;
+    filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
+  }
+
+  &-icon {
+    width: 20%;
+  }
+
+  &-git {
+    filter: invert(1);
+    width: 10%;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  &-title {
+    font-family: $title-font;
+    color: white;
+    margin-top: 4rem;
+  }
+
+  &-description {
+    font-family: $title-font;
+    color: #dadada;
+    font-size: 0.9rem;
+
+    span {
+      color: $bg-color;
+    }
+  }
+}

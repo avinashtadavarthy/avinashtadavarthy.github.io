@@ -1,0 +1,95 @@
+@import "./helpers/config";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-end;
+}
+
+.resume-btn {
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &-container {
+    @include transition-ease;
+    margin-top: 20px;
+    border: 2px solid $text-secondary;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 30px;
+    width: fit-content;
+    display: flex;
+    align-content: center;
+
+    img {
+      width: 50px;
+    }
+
+    p {
+      @include transition-ease;
+      margin: 16px;
+      padding: 4px;
+      color: $text-secondary;
+      text-transform: uppercase;
+      font-family: $subtitle-font;
+      font-weight: 500;
+      font-size: 1.5rem;
+
+      &:hover {
+        @include transition-ease;
+        color: $text-primary;
+      }
+    }
+
+    &:hover {
+      @include transition-ease;
+      border-color: $text-primary;
+      border-radius: 0px;
+    }
+  }
+}
+
+.footer {
+  background-color: #252525;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+
+  &-dev {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin: 10px;
+    }
+
+    p {
+      font-family: $title-font;
+      font-size: 20px;
+    }
+  }
+
+  &-year {
+    font-family: $title-font;
+    font-size: 20px;
+  }
+
+  &-desc {
+    font-family: $subtitle-font;
+    color: #DADADA;
+    font-size: 12px;
+  }
+}

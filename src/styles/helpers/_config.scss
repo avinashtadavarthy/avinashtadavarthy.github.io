@@ -1,0 +1,15 @@
+// colors
+$bg-color: #FFC107;
+$text-primary: #000000;
+$text-secondary: #3F3F3F;
+$text-highlight: #A62639;
+
+// fonts
+$title-font: 'Arvo', serif;
+$subtitle-font: 'Raleway', sans-serif;
+$text-font: 'Open Sans', sans-serif;
+
+// mixins
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}

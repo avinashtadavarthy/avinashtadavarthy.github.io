@@ -1,0 +1,71 @@
+@import "landing";
+@import "about";
+@import "skills";
+@import "work";
+@import "projects";
+@import "dance";
+@import "contact";
+@import "underdevelopment";
+
+// variables
+@import "./helpers/config";
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+.App {
+  background: $bg-color;
+}
+
+.under-development {
+  display: none;
+}
+
+.heading {
+  font-family: $title-font;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.subheading {
+  font-family: $title-font;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.normaltext {
+  font-family: $text-font;
+  font-size: 1.3rem;
+}
+
+// scrollbars formatting
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.8);
+}
+
+::-webkit-scrollbar-track {
+  background-color: $bg-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(120, 120, 120, 0.8);
+}
+
+// responsive
+@media only screen and (max-width: 600px) {
+  .main-app {
+    display: none;
+  }
+
+  .under-development {
+    display: block;
+  }
+}

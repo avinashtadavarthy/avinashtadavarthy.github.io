@@ -1,0 +1,81 @@
+@import "./helpers/config";
+
+.work {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.nav {
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.nav-pills .nav-link {
+  border-radius: 0 !important;
+  color: black !important;
+  font-size: 1.2rem;
+}
+
+.nav-pills .nav-link.active {
+  font-family: $subtitle-font;
+  font-size: 1.2rem;
+  background-color: transparent !important;
+  color: $text-highlight !important;
+  font-weight: bold;
+  border-left: 4px solid $text-highlight;
+}
+
+.workex {
+  &-title {
+    font-family: $title-font;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  span {
+    color: $text-highlight;
+  }
+
+  &-dates {
+    font-family: $title-font;
+    font-size: 1.2rem;
+    color: $text-secondary;
+  }
+
+  &-description {
+    font-family: $text-font;
+    font-size: 1.1rem;
+    color: $text-secondary;
+
+    span {
+      font-weight: 600;
+
+      a {
+        color: $text-highlight;
+      }
+
+      a:hover {
+        color: $text-highlight;
+      }
+    }
+  }
+}
+
+.workex-image {
+  img {
+    @include transition-ease;
+    filter: drop-shadow(6px 9px 0px rgba(0, 0, 0, 0.5));
+    width: 100%;
+
+    &:hover {
+      @include transition-ease;
+      filter: drop-shadow(6px 9px 10px rgba(0, 0, 0, 0.5));
+    }
+  }
+
+  .needl-imgs {
+    display: flex;
+    flex-direction: row;
+  }
+}

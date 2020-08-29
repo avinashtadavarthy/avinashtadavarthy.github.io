@@ -1,0 +1,90 @@
+@import "./helpers/config";
+
+.skills {
+  min-height: 100vh;
+  margin-top: 10vh;
+
+  .skills-list {
+    margin-top: 1rem;
+
+    .skill-row {
+      margin-top: 3rem;
+
+      &-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .skill-chart-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+.skill-element {
+  text-align: center;
+  margin: 1rem;
+
+  &-icon {
+    height: 5rem;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+  }
+
+  &-text {
+    margin-top: 5px;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+  }
+}
+
+// custom bar chart styling
+.skill-chart {
+  display: flex;
+  align-items: flex-end;
+
+  &-bar {
+    width: 6vw;
+    height: 70vh;
+    margin: 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 10px;
+
+    p {
+      transform-origin: top right;
+      transform: rotate(90deg) translate(14vh, 5px);
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-family: $subtitle-font;
+      font-weight: bold;
+      color: white;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+
+  &-bar:nth-child(1) {
+    height: 75%;
+  }
+
+  &-bar:nth-child(2) {
+    height: 50%;
+  }
+
+  &-bar:nth-child(3) {
+    height: 40%;
+  }
+
+  &-bar:nth-child(4) {
+    height: 75%;
+  }
+
+  &-bar:nth-child(5) {
+    height: 60%;
+  }
+}
