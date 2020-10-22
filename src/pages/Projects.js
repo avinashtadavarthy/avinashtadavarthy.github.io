@@ -1,5 +1,5 @@
 import React from 'react';
-import { sampleimg, bingo, compress, robot, nodeCode, name, ticket } from '../assets';
+import { bingo, compress, robot, nodeCode, name, ticket, placeholder } from '../assets';
 import { Container, Col, Row } from 'react-bootstrap';
 import FeaturedProject from '../components/FeaturedProject';
 import OtherProject from '../components/OtherProject';
@@ -13,21 +13,21 @@ export default class Projects extends React.Component {
     this.state = {
       featuredProjects: [
         {
-          image: sampleimg,
+          image: placeholder,
           title: 'QuickSort Mobile',
           description: 'Mobile app built in Flutter for QuickSort, a student-run initiative from IGDTUW, Delhi to educate their students about the recruitment process for placements and to help in preparation via mock interviews and tests.',
           techStack: 'Flutter / Git',
           link: 'https://github.com/avinashtadavarthy/Quick-Sort-Mobile'
         },
         {
-          image: sampleimg,
+          image: placeholder,
           title: 'iOS Themed Calculator',
           description: 'Basic Calculator app built in React Native to handle simple functionalities using JavaScript’s eval() function. It is inspired by the Calculator app on iOS and supports switching between light and dark modes.',
           techStack: 'React Native / Git',
           link: 'https://github.com/avinashtadavarthy/React-Native-Calculator'
         },
         {
-          image: sampleimg,
+          image: placeholder,
           title: 'Python Color Identifier',
           description: 'OpenCV based Command Line Tool written in Python to help in identifying colours in any given image based on pre-defined HSV color ranges. Generates a colour map by mapping all the pixels to their nearest neighbour in its range.',
           techStack: 'Python / OpenCV',

@@ -44,6 +44,7 @@ export const vasavi = require('./workex/vasavi.png')
 export const zoho = require('./workex/zoho.png')
 
 // personal projects
+export const placeholder = require('./placeholder.png')
 export const github = require('./github.svg')
 export const bingo = require('./other_projects/bingo.svg')
 export const compress = require('./other_projects/compress.svg')
