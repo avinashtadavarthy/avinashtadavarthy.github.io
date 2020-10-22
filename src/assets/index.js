@@ -61,6 +61,7 @@ export const play = require('./dance/play.svg')
 // contact
 export const resume = require('./portfolio.svg')
 export const logowhite = require('./avinash-tadavarthy-white.svg')
+export const resumePdf = require('./Avinash-Tadavarthy-Resume.pdf')
 
 // under development
 export const underDevelopment = require('./under-construction.webp')

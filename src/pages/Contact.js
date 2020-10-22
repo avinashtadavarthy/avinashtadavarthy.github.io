@@ -1,5 +1,5 @@
 import React from 'react';
-import { resume, logowhite } from '../assets'
+import { resume, logowhite, resumePdf } from '../assets'
 import { Container, Col, Row } from 'react-bootstrap';
 
 
@@ -37,7 +37,7 @@ export default class Contact extends React.Component {
         <Row>
           <Col xs={12} lg={{ span: 10, offset: 1 }}>
             <div className="resume-btn">
-              <a href={'https://docs.google.com/document/d/1uKylp32DMP21TaV2VHuegH2jPcRBTE25vBELIr0Xzmg'} target='_blank' rel='noopener noreferrer'>
+              <a href={resumePdf} target='_blank' rel='noopener noreferrer'>
                 <div className="resume-btn-container">
                   <img src={resume} alt="resume" />
                   <p>resume</p>
