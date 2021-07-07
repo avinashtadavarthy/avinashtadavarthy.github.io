@@ -74,6 +74,7 @@
 
     img {
       margin: 10px;
+      width: 300px;
     }
 
     p {
@@ -89,7 +90,37 @@
 
   &-desc {
     font-family: $subtitle-font;
-    color: #DADADA;
+    color: #dadada;
     font-size: 12px;
+  }
+}
+
+//responsive
+@media only screen and (max-width: 600px) {
+  .contact {
+    margin-top: 15vh;
+  }
+
+  .footer {
+
+    &-dev {
+      flex-direction: column;
+
+      p {
+        font-size: 1rem;
+      }
+
+      img {
+        width: 70%;
+      }
+    }
+
+    &-year {
+      font-size: 1rem;
+    }
+
+    &-desc {
+      font-size: 0.5rem;
+    }
   }
 }

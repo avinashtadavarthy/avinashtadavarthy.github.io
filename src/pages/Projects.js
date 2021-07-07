@@ -1,7 +1,8 @@
 import React from 'react';
-import { bingo, compress, robot, nodeCode, name, ticket, placeholder } from '../assets';
+import { bingo, compress, robot, nodeCode, name, ticket, quicksort, ioscalc, pythoncolor, svac } from '../assets';
 import { Container, Col, Row } from 'react-bootstrap';
 import FeaturedProject from '../components/FeaturedProject';
+import FeaturedProjectMobile from '../components/FeaturedProjectMobile';
 import OtherProject from '../components/OtherProject';
 
 
@@ -13,25 +14,32 @@ export default class Projects extends React.Component {
     this.state = {
       featuredProjects: [
         {
-          image: placeholder,
+          image: quicksort,
           title: 'QuickSort Mobile',
           description: 'Mobile app built in Flutter for QuickSort, a student-run initiative from IGDTUW, Delhi to educate their students about the recruitment process for placements and to help in preparation via mock interviews and tests.',
           techStack: 'Flutter / Git',
           link: 'https://github.com/avinashtadavarthy/Quick-Sort-Mobile'
         },
         {
-          image: placeholder,
+          image: ioscalc,
           title: 'iOS Themed Calculator',
           description: 'Basic Calculator app built in React Native to handle simple functionalities using JavaScript’s eval() function. It is inspired by the Calculator app on iOS and supports switching between light and dark modes.',
           techStack: 'React Native / Git',
           link: 'https://github.com/avinashtadavarthy/React-Native-Calculator'
         },
         {
-          image: placeholder,
+          image: pythoncolor,
           title: 'Python Color Identifier',
           description: 'OpenCV based Command Line Tool written in Python to help in identifying colours in any given image based on pre-defined HSV color ranges. Generates a colour map by mapping all the pixels to their nearest neighbour in its range.',
           techStack: 'Python / OpenCV',
           link: 'https://github.com/avinashtadavarthy/Python-Color-Identifier'
+        },
+        {
+          image: svac,
+          title: 'SVAC Foundation Website',
+          description: 'Website designed for a social initiative to publicize the efforts taken by a group of individuals to serve meals to the needy everyday during the time of the Covid-19 Lockdown in Chennai.',
+          techStack: 'Google Sites',
+          link: 'https://www.svacfoundation.in/'
         }
       ],
       otherProjects: [
@@ -97,6 +105,26 @@ export default class Projects extends React.Component {
       return res;
     }
 
+    // render featured projects for mobile
+    const renderFeaturedMobile = (arr) => {
+      let res = []
+      let i = 0
+
+      arr.forEach(item => {
+        res.push(<FeaturedProjectMobile
+          isPicLeft={i % 2 === 0 ? true : false}
+          image={item.image}
+          title={item.title}
+          description={item.description}
+          techStack={item.techStack}
+          link={item.link}
+        />);
+        i++;
+      });
+
+      return res;
+    }
+
     // render other projects
     const renderOther = (arr) => {
       let res = []
@@ -123,8 +151,11 @@ export default class Projects extends React.Component {
         </Row>
 
         <Row>
-          <Col xs={12} lg={{ span: 8, offset: 2 }}>
+          <Col className='featured-web' xs={12} lg={{ span: 8, offset: 2 }}>
             {renderFeatured(this.state.featuredProjects)}
+          </Col>
+          <Col className='featured-mobile' xs={12} lg={{ span: 8, offset: 2 }}>
+            {renderFeaturedMobile(this.state.featuredProjects)}
           </Col>
         </Row>
 

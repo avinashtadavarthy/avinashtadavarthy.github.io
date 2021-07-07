@@ -1,5 +1,5 @@
 import React from 'react';
-import { bhelliomTech, matchEzy, needl, needlShirt, needlWireframes, vasavi, zoho } from '../assets/'
+import { bhelliomTech, fidelityInv, matchEzy, needl, needlShirt, needlWireframes, vasavi, zoho } from '../assets/'
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 
 
@@ -18,34 +18,55 @@ export default class Work extends React.Component {
 
         <Row style={{ paddingTop: '3rem' }}>
           <Col xs={12} lg={{ span: 10, offset: 1 }}>
-            <Tab.Container className='work-tabs' defaultActiveKey="first">
+            <Tab.Container defaultActiveKey="fidelity">
               <Row>
                 <Col sm={2}>
-                  <Nav variant="pills" className="flex-sm-column">
+                  <Nav variant="pills" className="flex-sm-column flex-nowrap">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Vasavi Club</Nav.Link>
+                      <Nav.Link eventKey="fidelity">Fidelity Investments</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">needl</Nav.Link>
+                      <Nav.Link eventKey="vasavi">Vasavi Club</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Zoho Corp</Nav.Link>
+                      <Nav.Link eventKey="needl">needl</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="fourth">PLANezy</Nav.Link>
+                      <Nav.Link eventKey="zoho">Zoho Corp</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="fifth">Bhelliom Tech</Nav.Link>
+                      <Nav.Link eventKey="planezy">PLANezy</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="bhelliom">Bhelliom Tech</Nav.Link>
                     </Nav.Item>
                   </Nav>
                 </Col>
                 <Col sm={10}>
                   <Tab.Content>
-                    <Tab.Pane eventKey="first">
+                    <Tab.Pane eventKey="fidelity">
+                      <Row>
+                        <Col sm={{ span: 7, order: 1 }} xs={{ span: 12, order: 2 }} className='workex'>
+                          <h4 className='workex-title'>Software Developer <span>@ Fidelity Investments</span></h4>
+                          <p className='workex-dates'>Aug 2020 - Present</p>
+                          <hr />
+                          <p className='workex-description'>
+                            Currently working as a full-time software engineer at <span><a href='https://www.fidelity.com/' target='_blank' rel="noopener noreferrer">Fidelity Investments</a></span>.
+                            <br /><br /> Working extensively with Spring, Kafka and AWS to build a cloud-based Mutual Fund Processing system for Fidelity.
+                            <br /><br /> Parallelly working on cross-organization stretch assignments to create products catering to research analysts using Angular and Flask.
+                          </p>
+                        </Col>
+                        <Col sm={{ span: 5, order: 2 }} xs={{ span: 12, order: 1 }} className='workex-image'>
+                          <img src={fidelityInv} alt="fidelity" />
+                        </Col>
+                      </Row>
+                    </Tab.Pane>
+
+                    <Tab.Pane eventKey="vasavi">
                       <Row>
                         <Col sm={{ span: 7, order: 1 }} xs={{ span: 12, order: 2 }} className='workex'>
                           <h4 className='workex-title'>Website Developer <span>@ Vasavi Club Elite Chennai</span></h4>
-                          <p className='workex-dates'>May 2020 - Present</p>
+                          <p className='workex-dates'>May 2020 - Aug 2020</p>
                           <hr />
                           <p className='workex-description'>
                             Took up my first project as a web developer to architect a formal website for <span><a href='https://www.vasaviclubelitechennai.in/' target='_blank' rel="noopener noreferrer">Vasavi Club 2* Elite Chennai</a></span>.
@@ -59,7 +80,7 @@ export default class Work extends React.Component {
                       </Row>
                     </Tab.Pane>
 
-                    <Tab.Pane eventKey="second">
+                    <Tab.Pane eventKey="needl">
                       <Row>
                         <Col sm={{ span: 7, order: 1 }} xs={{ span: 12, order: 2 }} className='workex'>
                           <h4 className='workex-title'>Product Development Lead <span>@ needl</span></h4>
@@ -83,7 +104,7 @@ export default class Work extends React.Component {
                       </Row>
                     </Tab.Pane>
 
-                    <Tab.Pane eventKey="third">
+                    <Tab.Pane eventKey="zoho">
                       <Row>
                         <Col sm={{ span: 7, order: 1 }} xs={{ span: 12, order: 2 }} className='workex'>
                           <h4 className='workex-title'>Software Dev Intern <span>@ Zoho Corp</span></h4>
@@ -103,7 +124,7 @@ export default class Work extends React.Component {
                       </Row>
                     </Tab.Pane>
 
-                    <Tab.Pane eventKey="fourth">
+                    <Tab.Pane eventKey="planezy">
                       <Row>
                         <Col sm={{ span: 7, order: 1 }} xs={{ span: 12, order: 2 }} className='workex'>
                           <h4 className='workex-title'>Full-Stack Dev Intern <span>@ PLANezy</span></h4>
@@ -123,7 +144,7 @@ export default class Work extends React.Component {
                       </Row>
                     </Tab.Pane>
 
-                    <Tab.Pane eventKey="fifth">
+                    <Tab.Pane eventKey="bhelliom">
                       <Row>
                         <Col sm={{ span: 7, order: 1 }} xs={{ span: 12, order: 2 }} className='workex'>
                           <h4 className='workex-title'>Android Dev Intern <span>@ Bhelliom Tech</span></h4>

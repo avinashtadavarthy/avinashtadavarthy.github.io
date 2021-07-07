@@ -10,7 +10,7 @@ export default class Dance extends React.Component {
     return (
       <Container fluid className='dance'>
         <Row>
-          <Col xs={{ span: 12, order: 2 }} lg={{ span: 6, order: 1, offset: 1 }} className='dance-text'>
+          <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 1, offset: 1 }} className='dance-text'>
             <div className='dance-text-container'>
               <h1 className='heading'>I love dancing too!</h1>
               <h4 className='subheading'>Check out my Youtube Channel</h4>
@@ -22,7 +22,7 @@ export default class Dance extends React.Component {
               </p>
             </div>
           </Col>
-          <Col xs={{ span: 12, order: 1 }} lg={{ span: 4, order: 1 }} className='dance-video'>
+          <Col xs={{ span: 12, order: 2 }} lg={{ span: 4, order: 1 }} className='dance-video'>
             <div className='dance-video-container'>
               <a href='https://www.youtube.com/watch?v=I7S6hDV5IqI' target='_blank' rel="noopener noreferrer">
                 <img className='dance-video-container-img' src={dance1} alt="dance1" />

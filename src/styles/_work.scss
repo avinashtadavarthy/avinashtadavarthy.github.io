@@ -24,6 +24,7 @@
   color: $text-highlight !important;
   font-weight: bold;
   border-left: 4px solid $text-highlight;
+  outline: none;
 }
 
 .workex {
@@ -64,18 +65,62 @@
 
 .workex-image {
   img {
-    @include transition-ease;
-    filter: drop-shadow(6px 9px 0px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.5));
     width: 100%;
-
-    &:hover {
-      @include transition-ease;
-      filter: drop-shadow(6px 9px 10px rgba(0, 0, 0, 0.5));
-    }
   }
 
   .needl-imgs {
     display: flex;
     flex-direction: row;
+  }
+}
+
+//responsive
+@media only screen and (max-width: 600px) {
+  .work {
+    padding-bottom: 3rem;
+  }
+
+  .nav {
+    border-left: 0px;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-pills .nav-link {
+    font-size: 1rem;
+  }
+
+  .nav-pills .nav-link.active {
+    font-size: 1rem;
+    border-left: 0px;
+    border-top: 3px solid $text-highlight;
+  }
+
+  .workex-image {
+    img {
+      margin: 15px 0;
+    }
+  }
+
+  .workex {
+    &-title {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    &-dates {
+      font-size: 1rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+    }
   }
 }

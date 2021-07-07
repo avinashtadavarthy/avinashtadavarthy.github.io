@@ -19,7 +19,7 @@ export default class LandingPage extends React.Component {
               <div className="title-social">
                 <a href={'https://github.com/avinashtadavarthy'} target='_blank' rel='noopener noreferrer'>github</a>
                 <a href={'https://www.linkedin.com/in/avinash-tadavarthy/'} target='_blank' rel='noopener noreferrer'>linkedin</a>
-                <a href={'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=avinash.tadavarthy@gmail.com'} target='_blank' rel='noopener noreferrer'>email</a>
+                <a href={'mailto:avinash.tadavarthy@gmail.com'} target='_blank' rel='noopener noreferrer'>email</a>
               </div>
             </div>
           </Col>

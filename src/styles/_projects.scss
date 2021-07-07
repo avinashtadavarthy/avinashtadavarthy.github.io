@@ -24,6 +24,10 @@
   }
 }
 
+.featured-mobile {
+  display: none;
+}
+
 // featured projects
 .pic-left {
   .f-project {
@@ -37,7 +41,8 @@
       transform: translateX(25px);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: top;
+      filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
     }
 
     &-text {
@@ -62,18 +67,12 @@
       }
 
       &-description {
-        @include transition-ease;
         background: black;
         border-radius: 5px;
         color: white;
         padding: 15px;
         text-align: right;
-        filter: drop-shadow(3px 6px 0px rgba(0, 0, 0, 0.5));
-
-        &:hover {
-          @include transition-ease;
-          filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
-        }
+        filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
       }
 
       &-tech {
@@ -102,7 +101,8 @@
       transform: translateX(-25px);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: top;
+      filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
     }
 
     &-text {
@@ -127,18 +127,12 @@
       }
 
       &-description {
-        @include transition-ease;
         background: black;
         border-radius: 5px;
         color: white;
         padding: 15px;
         text-align: left;
-        filter: drop-shadow(-3px 6px 0px rgba(0, 0, 0, 0.5));
-
-        &:hover {
-          @include transition-ease;
-          filter: drop-shadow(-3px 6px 10px rgba(0, 0, 0, 0.5));
-        }
+        filter: drop-shadow(-3px 6px 10px rgba(0, 0, 0, 0.5));
       }
 
       &-tech {
@@ -157,29 +151,27 @@
 
 // other projects
 .o-project {
-  @include transition-ease;
   background: #252525;
   width: 275px;
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;
   margin: 2rem;
   border-radius: 5px;
-  filter: drop-shadow(3px 6px 0px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
 
-  &:hover {
-    @include transition-ease;
-    filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
-  }
+  &-top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 
-  &-icon {
-    width: 20%;
-  }
+    &-icon {
+      width: 20%;
+    }
 
-  &-git {
-    filter: invert(1);
-    width: 10%;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    &-git {
+      filter: invert(1);
+      width: 80%;
+    }
   }
 
   &-title {
@@ -195,6 +187,81 @@
 
     span {
       color: $bg-color;
+    }
+  }
+}
+
+// responsive
+@media only screen and (max-width: 600px) {
+  .projects {
+    margin-top: 10vh;
+  }
+
+  .featured-web {
+    display: none;
+  }
+
+  .featured-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // featured projects
+  .f-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-poster {
+      border-radius: 5px;
+      width: 90vw;
+      margin: 10px;
+      filter: drop-shadow(3px 6px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+
+      &-subtitle {
+        font-size: 0.8rem;
+        font-family: $title-font;
+        text-align: left;
+      }
+
+      &-title {
+        font-size: 1.2rem;
+        font-family: $title-font;
+        color: $text-highlight;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      &-description {
+        margin: 10px;
+        text-align: center;
+      }
+
+      &-tech {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-stack {
+          font-size: 1rem;
+          font-family: $title-font;
+          color: $text-secondary;
+          text-align: center;
+          margin: 10px;
+        }
+      }
+
+      &-git {
+        height: 1.2rem;
+        margin: 10px;
+      }
     }
   }
 }

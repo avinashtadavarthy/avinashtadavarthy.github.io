@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
               <p>in India</p>
             </div>
             <p className="footer-year">
-              2020
+              {new Date().getFullYear()}
             </p>
             <p className="footer-desc">
               This website was built with great tools like Figma, Illustrator, VS Code & Github. Fonts used are Arvo, Raleway and Open Sans. All fonts are served up via Google Fonts.

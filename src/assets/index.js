@@ -1,6 +1,3 @@
-// to delete
-export const sampleimg = require('./sampleimg.png')
-
 // landing
 export const logo = require('./avinash-tadavarthy.svg')
 export const arrow = require('./arrow-down.svg')
@@ -35,6 +32,7 @@ export const s22 = require('./skills_icons/image (a22).png')
 export const s23 = require('./skills_icons/image (a23).png')
 
 // workex
+export const fidelityInv = require('./workex/fidelity.jpg')
 export const bhelliomTech = require('./workex/24 crafts.png')
 export const matchEzy = require('./workex/matchezy.png')
 export const needl = require('./workex/needl.png')
@@ -44,7 +42,11 @@ export const vasavi = require('./workex/vasavi.png')
 export const zoho = require('./workex/zoho.png')
 
 // personal projects
-export const placeholder = require('./placeholder.png')
+export const ioscalc = require('./featured_projects/ioscalc.jpg')
+export const pythoncolor = require('./featured_projects/pythoncolor.jpg')
+export const quicksort = require('./featured_projects/quicksort.jpg')
+export const svac = require('./featured_projects/svac.jpg')
+export const websiteicon = require('./websiteicon.png')
 export const github = require('./github.svg')
 export const bingo = require('./other_projects/bingo.svg')
 export const compress = require('./other_projects/compress.svg')

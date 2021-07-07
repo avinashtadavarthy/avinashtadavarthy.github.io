@@ -4,10 +4,10 @@ function SkillChart() {
   return (
     <div className='skill-chart'>
       <div className="skill-chart-bar">
-        <p>mobile development</p>
+        <p>mobile dev</p>
       </div>
       <div className="skill-chart-bar">
-        <p>web development</p>
+        <p>web dev</p>
       </div>
       <div className="skill-chart-bar">
         <p>backend</p>
